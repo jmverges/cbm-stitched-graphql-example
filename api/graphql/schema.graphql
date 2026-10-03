@@ -1,0 +1,18 @@
+type Query {
+    "Lighthouse resolves this with Eloquent; the model is inferred from the return type."
+    recentOrders: [Order!]! @all
+}
+
+type Order {
+    id: ID!
+    "Served by the accessor Order::getTotalCentsAttribute(), not by a column named `total`."
+    total: Int! @rename(attribute: "total_cents")
+    "Served by the relation method Order::customer()."
+    buyer: Customer! @belongsTo(relation: "customer")
+}
+
+type Customer {
+    id: ID!
+    "Served by the accessor Customer::getDisplayNameAttribute()."
+    name: String! @rename(attribute: "display_name")
+}

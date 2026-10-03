@@ -1,0 +1,12 @@
+{
+  "name": "acme-web",
+  "private": true,
+  "description": "Vue 3 + Apollo client of the gateway (example only).",
+  "dependencies": {
+    "@apollo/client": "^3.11.0",
+    "@vue/apollo-composable": "^4.2.0",
+    "graphql": "^16.9.0",
+    "graphql-tag": "^2.12.6",
+    "vue": "^3.5.0"
+  }
+}

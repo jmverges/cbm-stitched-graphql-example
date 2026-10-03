@@ -1,0 +1,13 @@
+{
+  "name": "acme-gateway",
+  "private": true,
+  "description": "Schema-stitching gateway in front of the orders API (example only).",
+  "dependencies": {
+    "@graphql-tools/executor-http": "^1.1.0",
+    "@graphql-tools/stitch": "^9.0.0",
+    "@graphql-tools/wrap": "^10.0.0",
+    "graphql": "^16.9.0",
+    "graphql-yoga": "^5.0.0"
+  },
+  "type": "module"
+}

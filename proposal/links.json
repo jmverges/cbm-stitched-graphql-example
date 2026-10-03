@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "_comment": "Sketch of a declared-links file. Each project carries its own half; the existing cross-repo pass pairs halves by route key. symbol is resolved as file + short name, so authors don't need codebase-memory's qualified names. For callers, the generated GRAPHQL_CALLS edge would carry the route as its `operation` property, which the pass reads.",
+  "api": {
+    "file": "api/.cbmlinks.json",
+    "links": [
+      { "route": "__graphql__Order.total",   "role": "handler", "file": "app/Models/Order.php",    "symbol": "Order::getTotalCentsAttribute" },
+      { "route": "__graphql__Order.buyer",   "role": "handler", "file": "app/Models/Order.php",    "symbol": "Order::customer" },
+      { "route": "__graphql__Customer.name", "role": "handler", "file": "app/Models/Customer.php", "symbol": "Customer::getDisplayNameAttribute" }
+    ]
+  },
+  "web": {
+    "file": "web/.cbmlinks.json",
+    "links": [
+      { "route": "__graphql__Order.total",   "role": "caller", "file": "src/graphql/recentOrders.js", "symbol": "RECENT_ORDERS" },
+      { "route": "__graphql__Order.buyer",   "role": "caller", "file": "src/graphql/recentOrders.js", "symbol": "RECENT_ORDERS" },
+      { "route": "__graphql__Customer.name", "role": "caller", "file": "src/graphql/recentOrders.js", "symbol": "RECENT_ORDERS" }
+    ]
+  }
+}
